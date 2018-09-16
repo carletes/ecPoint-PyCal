@@ -1,0 +1,17 @@
+#!/bin/sh
+
+here="$(cd $(dirname $0) && pwd)"
+
+tag="$1"
+if [ -z "$tag" ] ; then
+  tag="ecmwf/ecpoint-pycal"
+fi
+
+docker build \
+       --file "${here}/Dockerfile" \
+       --tag $tag \
+       --build-arg http_proxy=$http_proxy \
+       --build-arg https_proxy=$https_proxy \
+       --build-arg ftp_proxy=$ftp_proxy \
+       --build-arg no_proxy=$no_proxy \
+       ${here}

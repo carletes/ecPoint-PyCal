@@ -47,7 +47,7 @@ setup(
         "numpy>=1.14.3",
         "flask>=1.0.2",
         "pandas==0.17.1",
-        "matplotlib>=2.2.3",
+        "matplotlib<3.0",
     ],
     extras_require={"dev": ["check-manifest"], "test": ["coverage", "pytest"]},
     project_urls={
