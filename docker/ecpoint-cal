@@ -11,6 +11,10 @@ exec docker run \
      --user $(id -u):$(id -g) \
      -e DISPLAY=$DISPLAY \
      -e HOME=$HOME \
+     -e http_proxy=$http_proxy \
+     -e https_proxy=$https_proxy \
+     -e ftp_proxy=$ftp_proxy \
+     -e no_proxy=$no_proxy \
      -v /home:/home \
      -v /hugetmp:/hugetmp \
      -v /perm:/perm \
